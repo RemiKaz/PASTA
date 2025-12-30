@@ -4,6 +4,21 @@ This repository contains code for two main components of the paper: Benchmarking
 
 The PASTA dataset is available on Hugging Face: [PASTA Dataset](https://huggingface.co/datasets/ENSTA-U2IS/PASTA/tree/main).
 
+## PASTA Score Calculation
+
+To compute the PASTA score for a new XAI method:
+
+1. Download the test set images
+2. Generate explanations for all images in the test set (test_imgs_PASTA_score.zip in the [PASTA Dataset link](https://huggingface.co/datasets/ENSTA-U2IS/PASTA/tree/main)):
+   - For saliency-based explanations, save the resulting heatmap images
+   - For CBM-based explanations, save JSON dictionaries containing concept values
+   - File format should be: `{ROOT}/{DATASET}_{ID_IMG}_{LABEL}.{EXTENTION}`
+3. Run the PASTA score script:
+
+```bash
+python pasta_score.py --path_explanation PATH_TO_THE_EXPLANATIONS --id_question ID_PASTA_QUESTION --out_format TYPE_OF_EXPLANATION
+```
+
 ## Explanation Computation Pipeline
 
 To generate explanations using the XAI methods included in the PASTA dataset:
@@ -48,17 +63,3 @@ The following table summarizes the XAI methods included in the PASTA dataset:
 | SHAP-CBM                      | Perturbation               | Concepts       | Post-hoc | CLIP-QDA, ConceptBottleneck         |
 | RISE-CBM                      | Perturbation               | Concepts       | Post-hoc | ConceptBottleneck                   |
 
-## PASTA Score Calculation
-
-To compute the PASTA score for a new XAI method:
-
-1. Download the test set images
-2. Generate explanations for all images in the test set (test_imgs_PASTA_score.zip in the [PASTA Dataset link](https://huggingface.co/datasets/ENSTA-U2IS/PASTA/tree/main)):
-   - For saliency-based explanations, save the resulting heatmap images
-   - For CBM-based explanations, save JSON dictionaries containing concept values
-   - File format should be: `{ROOT}/{DATASET}_{ID_IMG}_{LABEL}.{EXTENTION}`
-3. Run the PASTA score script:
-
-```bash
-python pasta_score.py --path_explanation PATH_TO_THE_EXPLANATIONS --id_question ID_PASTA_QUESTION --out_format TYPE_OF_EXPLANATION
-```
