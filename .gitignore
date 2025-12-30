@@ -1,0 +1,107 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+
+# C extensions
+*.so
+
+# Distribution / packaging
+.Python
+env/
+.venv/
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# PyInstaller
+#  Usually these files are written by a python script from a template
+#  before PyInstaller builds the exe, so as to inject date/other infos into it.
+*.manifest
+*.spec
+
+# Installer logs
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Unit test / coverage reports
+htmlcov/
+.tox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*,cover
+
+# Translations
+*.mo
+*.pot
+
+# Django stuff:
+*.log
+
+# zip files
+*.zip
+
+# Sphinx documentation
+docs/_build/
+
+# PyBuilder
+target/
+
+# data files
+data_npy/
+data_samples/
+data_samples_1st_batch/
+
+# model_paths
+models_pkl/
+
+# results
+results/
+result_dataset/
+result_dataset_2/
+result_dataset_old/
+results_archives/
+missing_samples_test/
+missing_samples_test_/
+missing_samples_test_new/
+missing_samples_test_new_old/
+Annotator_Histograms/
+BLIP/
+RISE/
+XAI_Technique_Histograms/
+to_test/
+result_dataset_1st_batch/
+result_bisbis/
+final/
+results_bus/
+outputs/
+test_pasta/
+examples_explanations/
+test_imgs/
+
+# Obselete methods
+pixel-flipping/
+configs/
+
+# Debug files
+to_debug.py
+llava_test.py
+
+# scripts
+scripts/
+
+# tables 
+*.csv
